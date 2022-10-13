@@ -1,7 +1,6 @@
-package tests
+package svg2png
 
 import (
-	svg2png "github.com/josheyr/svg2png/pkg"
 	"os"
 	"testing"
 )
@@ -11,7 +10,7 @@ const (
 )
 
 func TestSvgToPng(t *testing.T) {
-	pngitem, err := svg2png.SvgToPng(testSvg, 500, 500)
+	pngitem, err := SvgToPng(testSvg, 500, 500)
 	if err != nil {
 		t.Error(err)
 	}
