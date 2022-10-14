@@ -51,6 +51,11 @@ func SvgToPng(svg string, height int, width int) ([]byte, error) {
 		return nil, err
 	}
 
+	err = f.Close()
+	if err != nil {
+		return nil, err
+	}
+
 	args := []string{
 		"--headless",
 		"--no-sandbox",
